@@ -1,1 +1,0 @@
-Deploy: https://vadosdavos.github.io/test-task-qatesters/

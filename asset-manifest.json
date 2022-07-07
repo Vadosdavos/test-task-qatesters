@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/test-task-qatesters/static/css/main.8a1f774d.css",
+    "main.js": "/test-task-qatesters/static/js/main.eef6162d.js",
+    "index.html": "/test-task-qatesters/index.html",
+    "main.8a1f774d.css.map": "/test-task-qatesters/static/css/main.8a1f774d.css.map",
+    "main.eef6162d.js.map": "/test-task-qatesters/static/js/main.eef6162d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8a1f774d.css",
+    "static/js/main.eef6162d.js"
+  ]
+}
