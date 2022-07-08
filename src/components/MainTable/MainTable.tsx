@@ -1,4 +1,4 @@
-import { Button, Table } from 'antd';
+import { Button, Table, Tag } from 'antd';
 import type { ColumnsType } from 'antd/lib/table';
 import { DataType } from '../../api/api';
 import './MainTable.scss';
@@ -7,19 +7,19 @@ type propsType = {
   data: DataType[];
 };
 
-type btnTypes = {
+type tagsTypes = {
   [key: string]: string;
 };
 
 export const MainTable = ({ data }: propsType): JSX.Element => {
-  const btnTypes: btnTypes = {
+  const tagsTypes: tagsTypes = {
     new: 'Новое',
     started: 'Выполняется',
     declined: 'Отменено',
     completed: 'Выполнено',
     assigned_to: 'Назначено',
   };
-  const btnColors: btnTypes = {
+  const tagsColors: tagsTypes = {
     new: 'crimson',
     started: 'cornflowerblue',
     declined: 'black',
@@ -83,16 +83,16 @@ export const MainTable = ({ data }: propsType): JSX.Element => {
       align: 'center',
       width: 150,
       render: (_, record) => (
-        <Button
-          type='primary'
+        <Tag
           style={{
-            backgroundColor: `${btnColors[record.status]}`,
-            borderColor: `${btnColors[record.status]}`,
-            width: 110,
+            backgroundColor: `${tagsColors[record.status]}`,
+            borderColor: `${tagsColors[record.status]}`,
+            width: 100,
+            color: 'white',
           }}
         >
-          {btnTypes[record.status]}
-        </Button>
+          {tagsTypes[record.status]}
+        </Tag>
       ),
     },
   ];
