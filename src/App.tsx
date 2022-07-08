@@ -1,9 +1,10 @@
+import { Spin } from 'antd';
 import React, { useCallback, useEffect, useState } from 'react';
 import { DataType, getData } from './api/api';
 import './App.scss';
 import { MainTable } from './components/MainTable/MainTable';
 
-function App() {
+function App(): JSX.Element {
   const [data, setData] = useState<DataType[]>();
 
   const fetchData = useCallback(async (): Promise<void> => {
@@ -16,7 +17,13 @@ function App() {
     fetchData().catch(console.error);
   }, [fetchData]);
 
-  return <main className='App'>{data && <MainTable data={data} />}</main>;
+  return (
+    <main className='App'>
+      <Spin tip='Loading...' spinning={!data}>
+        <MainTable data={data!} />
+      </Spin>
+    </main>
+  );
 }
 
 export default App;

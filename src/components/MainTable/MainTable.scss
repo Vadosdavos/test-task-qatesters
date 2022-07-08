@@ -1,0 +1,19 @@
+.primaryText {
+  font-weight: bolder;
+}
+
+.secondaryText {
+  font-weight: lighter;
+  color: gray;
+}
+
+.gridContainer {
+  display: grid;
+  place-items: 'stretch';
+}
+
+.ellipsisContainer {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
